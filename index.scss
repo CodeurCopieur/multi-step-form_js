@@ -1,0 +1,79 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Variables */
+$primary-color: rgb(11, 78, 179);
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+/* Global Stylings*/
+label {
+  display: block;
+  margin-bottom: .5rem;
+  text-transform: capitalize;
+}
+input {
+  display: block;
+  width: 100%;
+  padding: .75rem;
+  border: none;
+  border-bottom: 1px solid $primary-color;
+  outline: none;
+}
+.w50 {
+  width: 50%;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Form */
+.form {
+  width: clamp(320px, 30%, 430px);
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: .35rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);  
+}
+
+.input-group {
+  margin: 2rem 0;
+}
+
+
+
+/* Button */
+
+.btn {
+  padding: .75rem;
+  display: block;
+  text-decoration: none;
+  background-color: $primary-color;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  border-radius: .25rem;
+  transition: .3s;
+
+  &:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);  
+    background-color: #fff;
+    color: $primary-color;
+  }
+}
