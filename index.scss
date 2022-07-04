@@ -70,6 +70,7 @@ input:not([type='submit']) {
 .progress {
   background-color: $primary-color;
   width: 0%;
+  transition: .3s;
 }
 
 .progress-step {
@@ -100,6 +101,7 @@ input:not([type='submit']) {
   color: #f3f3f3;
 }
 
+
 /* Form */
 .form {
   width: clamp(20rem, 30%, 26.875rem);
@@ -111,6 +113,8 @@ input:not([type='submit']) {
 
 .form-step {
   display: none;
+  transform-origin: top;
+  animation: animate .5s;
 }
 .form-step-active {
   display: block;
@@ -120,7 +124,16 @@ input:not([type='submit']) {
   margin: 32px 0;
 }
 
-
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
 
 /* Button */
 
